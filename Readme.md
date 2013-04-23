@@ -25,7 +25,7 @@ loadNotificationBadges(templeLink, alertTypes, type);
 ### loadNotificationBadges(element, alertTypes, type);
 
   Params:
-  - element (object): Needs to be a DOM object. 
+  - element (object): DOM element to append badge to. Needs to be a DOM object. 
   - alertTypes (Array): array of alertType names you want to look for in alertservice summary
   - type (String): (Optional) 'bool' if you just want a star or 'number' if you want the actual count retruned.
 
