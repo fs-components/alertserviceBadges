@@ -1,0 +1,29 @@
+<html>
+<head>
+  <link rel="stylesheet" href="build/build.css">
+  <script src="build/build.js"></script>
+</head>
+<body>
+  <h1>test</h1>
+
+  <ul class="main-nav unstyled clearfix notification-badges">
+    <li class="active"><a class="nav-item" href="https://familysearch.org/tree" data-i18n-bind="'FamilyTree'">Family Tree</a></li>
+    <li class=""><a class="nav-item" href="https://familysearch.org/photos" data-i18n-bind="'Photos'">Photos</a></li>
+    <li class=""><a class="nav-item" href="https://familysearch.org/search" data-i18n-bind="'Search'">Search</a></li>
+    <li class="nav-temple-link showIfHighConfMember" data-control-init="ShowIfHighConfMember" style="">
+      <a class="nav-item temple" href="https://familysearch.org/temple" data-i18n-bind="'Temple'">Temple</a>
+    </li>
+  </ul>
+  <script>
+    var loadNotificationBadges = require('alertserviceBadges');
+    
+
+    var templeLink = document.querySelector('.nav-item.temple');
+    var type = 'bool';
+    
+    loadNotificationBadges(templeLink, ['namesReady','namesReady-permissionRequired'],type);
+  
+  </script>
+
+</body>
+</html>

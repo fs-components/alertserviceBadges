@@ -1,0 +1,24 @@
+{
+  "name": "alertserviceBadges",
+  "repo": "fs-components/alertserviceBadges",
+  "description": "notification center for familysearch",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/cookie": "*",
+    "tylergraf/alertserviceCaller": "*",
+    "component/query": "*",
+    "jamischarles/query-qwery": "*",
+    "component/event": "*",
+    "component/domify": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "styles": [
+    "alertserviceBadges.css"
+  ]
+}

@@ -1,0 +1,1 @@
+module.exports = '<span class="notification-badge badge">*</span>';
