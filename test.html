@@ -1,22 +1,41 @@
 <html>
 <head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/hf.css">
   <link rel="stylesheet" href="build/build.css">
   <script src="build/build.js"></script>
 </head>
 <body>
-  <h1>test</h1>
+  <header class="clearfix ddPopover" id="global-engage-header" data-config="{&quot;trigger&quot;:&quot;.mobile-actions-trigger&quot;, &quot;target&quot;: &quot;.mobile-actions-dd&quot;}" data-control-init="ddPopover">
+    <div class="global-pri-nav-container clearfix">
+      <nav class="mobile-actions-dd">
+        <div class="main-nav-wrapper">
+          <ul class="main-nav unstyled clearfix">
+            <li class=""><a class="nav-item tree sCCustomLinkTracker" href="/tree" data-config="{&quot;type&quot;: &quot;o&quot;, &quot;name&quot;: &quot;li_hdr_tree&quot;}" data-control-init="SCCustomLinkTracker">Family Tree</a></li>
+            <li class=""><a class="nav-item photos sCCustomLinkTracker" href="/photos" data-config="{&quot;type&quot;: &quot;o&quot;, &quot;name&quot;: &quot;li_hdr_photos&quot;}" data-control-init="SCCustomLinkTracker">Photos</a></li>
+            <li class=""><a class="nav-item search sCCustomLinkTracker" href="/search" data-config="{&quot;type&quot;: &quot;o&quot;, &quot;name&quot;: &quot;li_hdr_srch&quot;}" data-control-init="SCCustomLinkTracker">Search</a></li>
+            <li class="active hide showIfHighConfMember" data-control-init="ShowIfHighConfMember" style="display: list-item;">
+              <a class="nav-item temple sCCustomLinkTracker" href="/temple" data-config="{&quot;type&quot;: &quot;o&quot;, &quot;name&quot;: &quot;li_hdr_temple&quot;}" data-control-init="SCCustomLinkTracker">Temple</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div><!-- /.global-pri-nav-container -->
+  </header>
 
-  <ul class="main-nav unstyled clearfix notification-badges">
-    <li class="active"><a class="nav-item" href="https://familysearch.org/tree" data-i18n-bind="'FamilyTree'">Family Tree</a></li>
-    <li class=""><a class="nav-item" href="https://familysearch.org/photos" data-i18n-bind="'Photos'">Photos</a></li>
-    <li class=""><a class="nav-item" href="https://familysearch.org/search" data-i18n-bind="'Search'">Search</a></li>
-    <li class="nav-temple-link showIfHighConfMember" data-control-init="ShowIfHighConfMember" style="">
-      <a class="nav-item temple" href="https://familysearch.org/temple" data-i18n-bind="'Temple'">Temple</a>
-    </li>
-  </ul>
+
   <script>
-    var loadNotificationBadges = require('alertserviceBadges');
+
+    var cookie = require('component-cookie/index.js');
     
+    var userId = 'cis.user.MMMM-6LBK';
+    var fssessionid = 'USYSA3CC32A84E689C210752532B9EBD49B8_idses-prod04.a.fsglobal.net';
+
+    cookie('fs-hf-user','%7B%22displayName%22%3A%22Person%20Name%22%2C%22id%22%3A%22'+userId+'%22%7D');
+    cookie('fssessionid',fssessionid);
+    
+
+    var loadNotificationBadges = require('alertserviceBadges');
 
     var templeLink = document.querySelector('.nav-item.temple');
     var type = 'bool';

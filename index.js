@@ -16,10 +16,10 @@ var template = require('./template');
 
 module.exports = function notificationBadges(el, alertTypes, type){
   var authToken = cookie('fssessionid');
-  var userId = cookie('fs-hf-user');
+  var userId = JSON.parse(decodeURIComponent(cookie('fs-hf-user'))).id;
   if(!authToken || !userId){return;} //if no user or if user is not logged in return
 
-  require('notificationCall')(userId, authToken, function(err, notificationSummary){
+  require('alertserviceCaller')(userId, authToken, function(err, notificationSummary){
     if(err){return;}
 
     var alertCount = 0;

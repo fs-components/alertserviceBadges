@@ -1,0 +1,755 @@
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2012 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Mark Simonson Studio
+ * License URL: http://www.fontspring.com/fflicense/mark-simonson-studio
+ *
+ *
+ */
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url("fs-webdev-font-proxima-nova/ProximaNova-Reg-webfont.eot");
+    src: url("fs-webdev-font-proxima-nova/ProximaNova-Reg-webfont.eot?#iefix") format('embedded-opentype'),
+         url("fs-webdev-font-proxima-nova/ProximaNova-Reg-webfont.woff") format('woff'),
+         url("fs-webdev-font-proxima-nova/ProximaNova-Reg-webfont.ttf") format('truetype'),
+         url("fs-webdev-font-proxima-nova/ProximaNova-Reg-webfont.svg#ProximaNovaRgRegular") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2012 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Mark Simonson Studio
+ * License URL: http://www.fontspring.com/fflicense/mark-simonson-studio
+ *
+ *
+ */
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url("fs-webdev-font-proxima-nova-bold/ProximaNova-Bold-webfont.eot");
+    src: url("fs-webdev-font-proxima-nova-bold/ProximaNova-Bold-webfont.eot?#iefix") format('embedded-opentype'),
+         url("fs-webdev-font-proxima-nova-bold/ProximaNova-Bold-webfont.woff") format('woff'),
+         url("fs-webdev-font-proxima-nova-bold/ProximaNova-Bold-webfont.ttf") format('truetype'),
+         url("fs-webdev-font-proxima-nova-bold/ProximaNova-Bold-webfont.svg#ProximaNovaRgBold") format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'museo';
+  src: url("fs-webdev-font-museo-slab/museo_slab_500-webfont.eot");
+  src: url("fs-webdev-font-museo-slab/museo_slab_500-webfont.eot?#iefix") format('embedded-opentype'),
+       url("fs-webdev-font-museo-slab/museo_slab_500-webfont.woff") format('woff'),
+       url("fs-webdev-font-museo-slab/museo_slab_500-webfont.ttf") format('truetype'),
+       url("fs-webdev-font-museo-slab/museo_slab_500-webfont.svg#museo_slab_500") format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+/* CJK Font stack */
+.locale-zh body,
+.locale-zh body .serif,
+.locale-zh #global-engage-header,
+.locale-zh #global-engage-footer {
+  font-family: "黑體-繁", "Heiti TC", "华文细黑", "STXihei", "微軟正黑體", "Microsoft JengHei", "中易黑体", "SimHei", sans-serif;
+}
+
+.locale-ja body,
+.locale-ja body .serif,
+.locale-ja #global-engage-header,
+.locale-ja #global-engage-footer {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ ゴシック", "MS Gothic", sans-serif;
+}
+
+.locale-ko body,
+.locale-ko body .serif,
+.locale-ko #global-engage-header,
+.locale-ko #global-engage-footer {
+  font-family: "Apple SD Gothic Neo", "애플고딕", "AppleGothic", "맑은 고딕", "Malgun Gothic", "굴림", "Gulim", sans-serif;
+}
+
+/* Russian can't handle optimizelegibility */
+.locale-ru h1,
+.locale-ru h2,
+.locale-ru h3,
+.locale-ru h4,
+.locale-ru h5,
+.locale-ru h6 {
+  text-rendering: auto;
+}
+
+/* Museo can't handle Russian */
+.locale-ru .serif {
+  font-family: proximanova;
+}
+
+/* Apply .ignore-cjk when you don't want those fonts on certain elements, like arrows. */
+.ignore-cjk {
+  font-family: proximanova;
+}
+
+.serif,
+.locale-zh .serif.ignore-cjk,
+.locale-ja .serif.ignore-cjk,
+.locale-ko .serif.ignore-cjk {
+  font-family: museo, serif;
+}
+
+/* Language conditional showing */
+/* Show only in zh */
+.show-zh {
+  display: none;
+}
+.locale-zh .show-zh {
+  display: inherit;
+}
+
+/* Show only in ja */
+.show-ja {
+  display: none;
+}
+.locale-ja .show-ja {
+  display: inherit;
+}
+
+/* Show only in ko */
+.show-ko {
+  display: none;
+}
+.locale-ko .show-ko {
+  display: inherit;
+}
+
+/* Language conditional hiding */
+/* hide only in zh */
+.locale-zh .hide-zh {
+  display: none;
+}
+
+/* hide only in ja */
+.locale-ja .hide-ja {
+  display: none;
+}
+
+/* hide only in ko */
+.locale-ko .hide-ko {
+  display: none;
+}
+
+/*hide only in en*/
+.locale-en.locale-en .hide-en {
+  display: none;
+}
+
+.locale-en.locale-ru .hide-en,
+.locale-en.locale-de .hide-en,
+.locale-en.locale-it .hide-en,
+.locale-en.locale-fr .hide-en,
+.locale-en.locale-pt .hide-en,
+.locale-en.locale-es .hide-en,
+.locale-en.locale-ja .hide-en,
+.locale-en.locale-ko .hide-en,
+.locale-en.locale-zh .hide-en {
+  display: block;
+} /* hide only in en */
+
+/** Header **/
+#global-engage-header {
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 0 rgba(0,0,0,0.1);
+  box-shadow: 0px 5px 0 rgba(0,0,0,0.1);
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+  min-width: 980px;
+  /*position: relative;*/
+}
+.ie8 #global-engage-header {
+  border-bottom: 5px solid #e5e5e5;
+}
+#global-engage-footer {
+  min-width: 980px;
+}
+
+#global-engage-header a,
+#global-engage-footer a {
+  -moz-transition: color 0.2s, background-color 0.2s, border-bottom-color 0.2s; /* Firefox 4 */
+  -webkit-transition: color 0.2s, background-color 0.2s, border-bottom-color 0.2s; /* Safari and Chrome */
+  -o-transition: color 0.2s, background-color 0.2s, border-bottom-color 0.2s; /* Opera */
+  transition: color 0.2s, background-color 0.2s, border-bottom-color 0.2s;
+}
+
+#global-engage-header .global-pri-nav-container {
+  clear: both;
+  margin-bottom: 7px;
+  position: relative;
+  margin-top: 10px;
+}
+
+#global-engage-header .global-util-nav-container {
+  background: #fff;
+  margin-bottom: 0;
+  padding-right: 0;  
+}
+
+#global-engage-header .global-util-nav-container .utilities {
+  margin-bottom: 0;
+}
+
+#global-engage-header .global-util-nav-container .utilities a.nav-item {
+  color: #707070;
+  font-size: 14px;
+  line-height: 1em;
+  margin-left: 30px;
+  margin-top: 7px;
+}
+
+/* TODO: Use vector or retina logo */
+#global-engage-header .logo-container {
+  float: left;
+  margin: 0;    
+  overflow: hidden;
+  top: -18px;
+  position: absolute;
+  /*HIDING TREE ICON*/
+  top: -5px;
+}
+
+#global-engage-header .logo-container .logo {
+  /* SVG Fallback: http://pauginer.tumblr.com/post/36614680636/invisible-gradient-technique */
+  background-image: url("fs-webdev-theme-engage/assets/images/fs-logo-193x48.png"); 
+  background-repeat: no-repeat; 
+  background-image: none, url("fs-webdev-theme-engage/assets/images/fs-icon-logo.svg");
+  display: block;
+  width: 193px;
+  height: 50px;
+  margin: 0;
+  text-decoration: none;
+  /*HIDING TREE ICON*/
+  height: 29px;
+  background-position: -33px -22px;
+  background-size: 100%;
+}
+
+#global-engage-header .beta-tag {
+  position: absolute;
+  left: 160px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666662;
+  float: left;
+  padding: 5px;
+  line-height: 1em;
+  border-radius: 5px;
+  top: 1px;
+}
+
+#global-engage-header .utilities {
+  float: right;
+  margin: 0 0 10px;
+}
+
+#global-engage-header .utilities>li {
+  float: left;
+  position: relative;
+}
+
+#global-engage-header .utilities>li>a {
+  display: block;
+  color: #666460;
+}
+
+#global-engage-header .utilities .header-icon {
+  /*padding: 20px 16px 10px 28px;*/
+  /*padding-left: 28px;*/
+  /*margin-left: 14px;*/
+  /*text-decoration: none;*/
+  /*background: transparent url("fs-webdev-theme-engage/assets/images/volunteer-icon.svg") left 16px no-repeat;*/
+  /*-webkit-background-size: 26px;
+  -o-background-size: 26px;
+  -moz-background-size: 26px;
+  background-size: 26px;*/
+}
+
+#global-engage-header .menu .header-icon {
+  background-image: url("fs-webdev-theme-engage/assets/images/menu-icon.png");
+  background-repeat: no-repeat;
+  background-position: 4px 21px;
+  background-image: none, url("fs-webdev-theme-engage/assets/images/menu-icon.svg");
+}
+
+#global-engage-header .help .header-icon {
+  /*background-image: url("fs-webdev-theme-engage/assets/images/help-icon.svg");
+  background-position: 4px 21px;*/
+}
+
+#global-engage-header .account {
+  float: right;
+  z-index: 900;
+  position: relative;
+}
+#global-engage-header .account a.account-name {
+  font-size: 14px;
+  padding-top: 12px;
+  color: #707070;
+  line-height: 1em;
+  margin-left: 30px;
+  margin-top: 0;
+  line-height: 1em;
+  font-size: 14px;
+  padding-bottom: 0;
+}
+#global-engage-header .account .header-icon.sign-in { /* more specificty to override rules */
+  background: transparent url("fs-webdev-theme-engage/assets/images/account-icon.png") left 6px no-repeat;
+  background-image: none, url("fs-webdev-theme-engage/assets/images/account-icon.svg");
+  /*background-position: 6px 19px;*/
+  /*padding: 20px 16px 10px 28px;*/
+  padding-left: 28px;
+  margin-left: 14px;
+  text-decoration: none;
+  margin-top: 0;
+  line-height: 1em;
+  font-size: 14px;
+}
+
+#global-engage-header .utility-trigger:after {
+  content: '▼';
+  font-size: 8px;
+  margin-left: 6px;
+}
+
+#global-engage-header .utility-menu {
+  color: #FFF;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background: #454545;
+  padding: 13px 16px;
+  width: 200px;
+  margin-left: -42px;
+  z-index: 1000;
+  right: 0;
+/*  -webkit-transition: all .2s;
+     -moz-transition: all .2s;
+          transition: all .2s;*/
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+       -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+ 
+#global-engage-header .account .utility-menu li {
+  float: none; margin-left: 0;
+}
+
+#global-engage-header .main-nav .account {
+  position: relative;
+}
+
+#global-engage-header .utility-menu.visible {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1000;
+}
+
+#global-engage-header .utility-menu .remoteAssistance {
+  position: absolute;
+  right: 48px;
+  top: 0;
+  width: 30px;
+  height: 0px;
+  background: url("fs-webdev-theme-engage/assets/images/remote-sprite.png") no-repeat;
+  margin-top: 5px;
+}
+
+#global-engage-header .utility-menu .remoteAssistance:hover {
+  background-position: 0 -25px;
+}
+
+#global-engage-header .utility-menu .close-menu {
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+
+#global-engage-header .utility-menu a {
+  color: #FFF;
+  padding: 12px 0;
+  display: block;
+}
+
+#global-engage-header .utility-menu h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.locale-ru #global-engage-header .utility-menu h4 {
+  font-size: 14px;
+}
+
+#global-engage-header .utility-menu.double-wide {
+  width: 530px;
+  margin-left: -454px;
+}
+
+#global-engage-header .utility-menu .helpMenuContainer {
+  display: none;
+}
+
+#global-engage-header .utility-menu .helpMenuContent {
+  background-color: #fff;
+  padding: 16px;
+  color: #000;
+  height: 240px;
+  overflow: auto;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+}
+
+#global-engage-header .utility-menu .helpMenuContainer a {
+  color: #0088CC;
+  padding: 0;
+}
+ 
+#global-engage-header .menu-arrow-up {
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+
+#global-engage-header .resources .menu-arrow-up {
+  margin-left: 156px;
+}
+
+#global-engage-header .help .menu-arrow-up {
+  margin-left: 290px;
+}
+
+#global-engage-header .account .menu-arrow-up {
+  margin-left: 126px;
+}
+
+#global-engage-header #church-sites {
+  /*background: #e5e5e5;
+  font-size: 12px;
+  padding: 9px 12px 11px;
+  border-top: 11px solid #ccc;
+  text-decoration: none;
+  -webkit-border-bottom-right-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;*/
+}
+
+#global-engage-header .utility-menu .menu-icon {
+  padding-left: 28px;
+  /*margin-left: 14px;*/
+  text-decoration: none;
+  background: transparent url("fs-webdev-theme-engage/assets/images/help-flyout-sprite.png") -5px 5px no-repeat;
+}
+
+#global-engage-header .utility-menu .menu-icon.phone {
+  background-position: -5px -76px;
+}
+
+#global-engage-header .utility-menu .menu-icon.building {
+  background-position: -5px -155px;
+}
+
+#global-engage-header .utility-menu .menu-icon.help-center {
+  background-position: -5px -234px;
+}
+
+#global-engage-header .utility-menu .menu-icon.envelope {
+  background-position: -5px -316px;
+}
+
+#global-engage-header nav {
+  /*clear: both;*/
+  /*float: right;*/
+  float: none;
+}
+
+#global-engage-header nav ul {
+  margin: 0;
+  /*background: #666460;*/
+}
+
+#global-engage-header nav li {
+  float: left;
+  margin-left: 6px; /* feels dirty. Take this out? */
+}
+
+#global-engage-header .main-nav-wrapper {
+  position: relative;
+  left: 50%;
+  float: left;
+  z-index: 1;
+  /*BETA-TAG*/
+  margin-left: 0px;
+}
+
+
+#global-engage-header .main-nav {
+  position: relative;
+  left: -50%;
+  float: left;
+}
+
+#global-engage-header nav a.nav-item,
+#global-engage-header nav a.nav-item:visited {
+  color: #4D4E4E;
+  padding: 9px;
+  /*display: block;*/
+  line-height: 1em;
+  border-radius: 5px;
+  font-size: 18px;
+  /*padding-right: 0;*/
+}
+
+#global-engage-header nav a.nav-item:hover,
+#global-engage-header nav a.nav-item:active/*,
+.utility-menu a:hover,
+.utility-menu a:active*/ {
+  color: #ADADAD;
+  /*color: #fff;*/
+  /*background: #7d807a;*/
+  text-decoration: none;
+}
+
+#global-engage-header nav .active a.nav-item,
+#global-engage-header nav .active a.nav-item:visited {
+  background: #e1ecc3;
+}
+
+/** Footer **/
+#global-engage-footer {
+  background: #fff;
+  padding: 20px 0;
+  min-height: 30px;
+  position: relative;
+}
+
+#global-engage-footer nav {
+  margin-bottom: 24px;
+}
+
+#global-engage-footer nav a {
+  color: #777;
+  font-size: 14px;
+  line-height: 19px;
+  margin-right: 34px;
+}
+
+#global-engage-footer nav a.last {
+  margin-right: 0;
+}
+
+#global-engage-footer nav a:hover {
+  color: #444444;
+}
+
+#global-engage-footer .center {
+  text-align: center;
+}
+
+#global-engage-footer .moreover {
+  text-align: right;
+}
+
+#global-engage-footer .copyright_notice {
+  color: #777777;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+#global-engage-footer .copyright_notice .privacy_usage {
+  display: block;
+}
+ 
+#global-engage-footer .copyright_notice a {
+  color: #1A1A1A;
+}
+
+#global-engage-footer .copyright_notice a:hover {
+  color: #000;
+}
+
+#global-engage-footer .language-picker-container {
+  display:inline;
+}
+
+#global-engage-footer .language-picker-trigger {
+  background: url("fs-webdev-theme-engage/assets/images/globe-icon.png") top left no-repeat;
+  padding-left: 24px;
+  padding-bottom: 1px;
+}
+
+#global-engage-footer .language-picker-trigger:after {
+  /*content: '▲';*/ /* Unicode arrow. Needs to be tested: http://www.alanwood.net/unicode/geometric_shapes.html*/
+  content: '\25B2'; /* IE8+ seems to be s*/
+  font-size: 8px;
+  margin-left: 6px;
+}
+
+#global-engage-footer .language-picker-menu {
+  background-color: #4D4D4D; 
+  display: none;
+  position: absolute;
+  margin-top: -293px;
+  margin-left: 43%;
+  width: 265px;
+  z-index: 10;
+}
+
+#global-engage-footer .language-picker-menu.visible {
+  display: block;
+}
+
+#global-engage-footer .language-picker-menu .lang-list {
+  float: left; /* Clear float */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#global-engage-footer .language-picker-menu .lang-list li {
+  border-bottom: 1px solid black; /* FIXME: is this really black? */
+  border-top: 1px solid #666666;
+  float: left; /* Clear float */
+}
+
+#global-engage-footer .language-picker-menu .lang-list li.last {
+  /*border-bottom: none;*/
+}
+
+#global-engage-footer .language-picker-menu .lang-list li a {
+  color: white;
+  display: block;
+  float: left;
+  font-size: 14px;
+  line-height: 19px;
+  margin-right: 0;
+  padding: 15px 0px;
+  width: 132px;
+}
+
+#global-engage-footer .language-picker-menu .lang-list li a.active {
+  color: #999999;
+  cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER FOOTER ONLY */
+
+/* Center header */
+#global-engage-header .global-pri-nav-container, 
+#global-engage-header .global-util-nav-container { 
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+}
+
+/* Login / Logout logic for displayname */
+/* Nav show/hide rules for logged in/out when JS renders the nav for non-frontier apps. */
+#global-engage-header .nav-item.if-signed-in {display: none;} /* additional specificity needed to override */
+#global-engage-header.hf-nav-signed-in .nav-item.if-signed-in {display: block;}
+#global-engage-header.hf-nav-signed-in .nav-item.if-signed-out {display: none; }
+
+
+/* Nav show/hide rules for temple in non-frontier apps */
+#global-engage-header nav .nav-temple-link {display: none;}
+#global-engage-header.hf-nav-high-confidence-member nav .nav-temple-link {display: list-item;}
+
+
+
+/* HEADER FOOTER ONLY (Bootstrap normalizer) */
+
+#global-engage-header a,
+#global-engage-footer a {
+  text-decoration: none;
+}
+#global-engage-header a:hover,
+#global-engage-footer a:hover {
+  text-decoration: underline;
+}
+
+#global-engage-header .hide {
+  display: none;
+}
+
+#global-engage-header .clearfix {
+  *zoom: 1;
+}
+
+#global-engage-header .clearfix:before,
+#global-engage-header .clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+#global-engage-header .clearfix:after {
+  clear: both;
+}
+
+#global-engage-header ul.unstyled, ol.unstyled {
+  list-style: none;
+}
+
+/* Show for phones only... */
+#global-engage-header .visible-phone {
+  display:none;
+}
