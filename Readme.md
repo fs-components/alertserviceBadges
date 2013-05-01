@@ -9,7 +9,17 @@
 
 
 ## Example
+Some cookies need to be set:
+```js
+var cookie = require('component-cookie/index.js');
 
+//these two vars need to be set.
+var userId = 'cis.user.MMMM-9999';
+var fssessionid = 'USYSA3CC32A84E689C210752532B9EBD49B8_idses-prod04.a.fsglobal.net';
+
+cookie('fs-hf-user','%7B%22displayName%22%3A%22Person%20Name%22%2C%22id%22%3A%22'+userId+'%22%7D');
+cookie('fssessionid',fssessionid);
+```
 ```js
 
 var templeLink = document.querySelector('.nav-item.temple'); 
