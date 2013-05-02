@@ -5,7 +5,7 @@
 
 ## Installation
 
-    $ component install tylergraf/alertserviceBadges
+    $ component install fs-components/alertserviceBadges
 
 
 ## Example
