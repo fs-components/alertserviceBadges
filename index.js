@@ -15,27 +15,39 @@ var domify = require("domify");
 var template = require('./template');
 
 module.exports = function notificationBadges(el, alertTypes, type){
+  //get session cookie
   var authToken = cookie('fssessionid');
-  var userId = JSON.parse(decodeURIComponent(cookie('fs-hf-user'))).id;
-  if(!authToken || !userId){return;} //if no user or if user is not logged in return
+  //get user cookie
+  var user = cookie('fs-hf-user');
 
+  //if no user or if user is not logged in return
+  if(!authToken || !user){return;} 
+  
+  //parse and decode user cookie
+  var userId = JSON.parse(user).id;
+  
   require('alertserviceCaller')(userId, authToken, function(err, notificationSummary){
     if(err){return;}
 
     var alertCount = 0;
-      for (var i = 0; i < notificationSummary.alertSummaries.length; i++) { //only augment alertCount for alerts within alertTypes
-        if(alertTypes.indexOf(notificationSummary.alertSummaries[i].alertType) !== -1){
-          alertCount += notificationSummary.alertSummaries[i].count;
-        }
-      }; 
-
-      if(alertCount > 0){ //only show badge if alertCount is greater than 0
-        var badge = domify(template)[0];
-        if(type === 'number'){ // set alertCount from * to actual count if type is number
-          badge.innerHTML = alertCount;
-        }
-        el.appendChild(badge); //append badge to specified element.
+    //only augment alertCount for alerts within alertTypes
+    for (var i = 0; i < notificationSummary.alertSummaries.length; i++) { 
+      if(alertTypes.indexOf(notificationSummary.alertSummaries[i].alertType) !== -1){
+        alertCount += notificationSummary.alertSummaries[i].count;
       }
+    }; 
+
+    //only show badge if alertCount is greater than 0
+    if(alertCount > 0){ 
+      var badge = domify(template)[0];
+
+      // set alertCount from * to actual count if type is number
+      if(type === 'number'){ 
+        badge.innerHTML = alertCount;
+      }
+      //append badge to specified element.
+      el.appendChild(badge); 
+    }
   });
 
 }
