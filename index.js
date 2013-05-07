@@ -13,17 +13,37 @@ var cookie = require("cookie");
 var events = require("event"); 
 var domify = require("domify"); 
 var template = require('./template');
+var timesTried = 0;
 
 module.exports = function notificationBadges(el, alertTypes, type){
-  //get session cookie
-  var authToken = cookie('fssessionid');
-  //get user cookie
-  var user = cookie('fs-hf-user');
+  var authToken,
+      user;
+
+  function getCookies() {
+    //get session cookie
+    authToken = cookie('fssessionid');
+    //get user cookie
+    user = cookie('fs-hf-user');
+  }
+
+  getCookies();
 
   //if no user or if user is not logged in return
-  if(!authToken || !user){return;} 
+  if(!authToken || !user){
+
+    // if we've recursed more than once, quit
+    if(timesTried > 1){return}
+
+    //setting timeout because the fs-hf-user cookie sometimes isn't set yet.
+    var t = setTimeout(function() {
+      // recursively call notificationBadges after 1/2 second.
+      notificationBadges(el,alertTypes,type);
+      timesTried++;
+    },500);
+    return;
+  } 
   
-  //parse and decode user cookie
+  //parse user cookie
   var userId = JSON.parse(user).id;
   
   require('alertserviceCaller')(userId, authToken, function(err, notificationSummary){
