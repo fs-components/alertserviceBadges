@@ -1,8 +1,8 @@
-.main-nav .nav-item {
+#global-engage-header .main-nav .nav-item {
   position: relative;
 }
 
-.main-nav .badge {
+#global-engage-header .main-nav .badge {
   position: absolute;
   top: 2px;
   right: -5px;
@@ -20,7 +20,7 @@
 }
 
 @media (max-width: 767px) {
-  .main-nav .badge {
+  #global-engage-header .main-nav .badge {
     left: -2px;
     right: auto;
   }
