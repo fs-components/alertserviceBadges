@@ -49,7 +49,10 @@ module.exports = function notificationBadges(el, alertTypes, type){
   require('alertserviceCaller')(userId, authToken, function(err, notificationSummary){
     if(err){return;}
 
-    var alertCount = 0;
+    // Adding indexOf function for ie8
+    if (!Array.prototype.indexOf) {      Array.prototype.indexOf = function(elt /*, from*/)      {        var len = this.length >>> 0;var from = Number(arguments[1]) || 0;        from = (from < 0)             ? Math.ceil(from)             : Math.floor(from);        if (from < 0)          from += len; for (; from < len; from++)        {          if (from in this &&              this[from] === elt)            return from;        }        return -1;      };    }    var alertCount = 0;
+    
+
     //only augment alertCount for alerts within alertTypes
     for (var i = 0; i < notificationSummary.alertSummaries.length; i++) { 
       if(alertTypes.indexOf(notificationSummary.alertSummaries[i].alertType) !== -1){
