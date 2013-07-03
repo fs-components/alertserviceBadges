@@ -6,7 +6,7 @@
   "keywords": [],
   "dependencies": {
     "component/cookie": "*",
-    "tylergraf/alertserviceCaller": "*",
+    "fs-components/alertserviceCaller": "*",
     "component/query": "*",
     "jamischarles/query-qwery": "*",
     "component/event": "*",
